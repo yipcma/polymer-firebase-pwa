@@ -11,6 +11,8 @@
     <paper-fab icon="add" on-tap="create" disabled="[[!online]]" aria-label="Add note"></paper-fab>
     <na-editor id="editor" note="{{editableNote}}" on-close="commitChange"></na-editor>
     <firebase-document id="document" app-name="notes" path="[[editableNoteId]]" data="{{editableNote}}"></firebase-document>
+    <firebase-query id="query" app-name="notes" path="/notes/[[user.uid]]" data="{{notes}}"></firebase-query>
+    <app-indexeddb-mirror session="[[user.uid]]" key="notes" data="{{notes}}" persisted-data="{{persistedNotes}}"></app-indexeddb-mirror>
   </template>
   <script>
     Polymer({
