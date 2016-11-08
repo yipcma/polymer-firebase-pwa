@@ -8,4 +8,4 @@ $ bower install -p polymerlabs/note-app-elements firebase/polymerfire
 
 $ cd ../
 
-# try out my deployment at https://polymer-firebase-pwa-6f660.firebaseapp.com/
+try out my deployment at https://polymer-firebase-pwa-6f660.firebaseapp.com/
